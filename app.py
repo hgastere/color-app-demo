@@ -3,7 +3,6 @@ from flask import Flask
 from flask import render_template
 import socket
 import random
-import os
 
 app = Flask(__name__)
 
@@ -29,6 +28,8 @@ def main():
 
 @app.route('/color/<new_color>')
 def new_color(new_color):
+    if new_color not in color_codes:
+        return "Color not supported", 400
     return render_template('hello.html', name=socket.gethostname(), color=color_codes[new_color])
 
 @app.route('/read_file')
