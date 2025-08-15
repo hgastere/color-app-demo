@@ -16,7 +16,7 @@ color_codes = {
     "purple": "#7d3c98"
 }
 
-color = os.environ.get('APP_COLOR') or random.choice(["red","green"])
+color = os.environ.get('APP_COLOR') or random.choice(["red","green","white"])
 #color = os.environ.get('APP_COLOR') or random.choice(["white"])
 #color = os.environ.get('APP_COLOR') or random.choice(["pink","blue","yellow"])
 
